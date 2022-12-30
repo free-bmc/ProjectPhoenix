@@ -1,0 +1,124 @@
+
+/* This information is very critical to understand the table size */
+
+IpmiChannelConfig_sT  gChannelConfigTable[] = {
+#if (config_FIRMWARE_FEATURE_IPMB_CHANNEL==1) 
+    {.u8ChannelProtocolType=CHANNEL_PROTOCOL_TYPE_IPMB_1_0_IOS_IOL, .u8MediumType=CHANNEL_MEDIUM_TYPE_IPMB},
+#else     
+    {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif
+    
+#if (config_FIRMWARE_FEATURE_USE_CHANNEL1==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNEL1_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNEL1_MEDIUM_TYPE
+        { .u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNEL1_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNEL1_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNEL1_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNEL1_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif   
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNEL2==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNEL2_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNEL2_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNEL2_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNEL2_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNEL2_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNEL2_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNEL3==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNEL3_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNEL3_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNEL3_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNEL3_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNEL3_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNEL3_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNEL4==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNEL4_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNEL4_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNEL4_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNEL4_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNEL4_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNEL4_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNEL5==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNEL5_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNEL5_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNEL5_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNEL5_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNEL5_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNEL5_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNEL6==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNEL6_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNEL6_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNEL6_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNEL6_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNEL6_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNEL6_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNEL7==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNEL7_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNEL7_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNEL7_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNEL7_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNEL7_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNEL7_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNEL8==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNEL8_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNEL8_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNEL8_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNEL8_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNEL8_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNEL8_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNEL9==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNEL9_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNEL9_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNEL9_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNEL9_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNEL9_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNEL9_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNELA==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNELA_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNELA_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNELA_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNELA_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNELA_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNELA_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+
+#if (config_FIRMWARE_FEATURE_USE_CHANNELB==1) 
+    #ifdef config_FIRMWARE_PARAM_CHANNELB_PROTOCOL_TYPE && config_FIRMARE_PARAM_CHANNELB_MEDIUM_TYPE
+        {.u8ChannelProtocolType=config_FIRMWARE_PARAM_CHANNELB_PROTOCOL_TYPE, .u8MediumType=config_FIRMARE_PARAM_CHANNELB_MEDIUM_TYPE},
+    #else 
+        #error Undefined config_FIRMWARE_PARAM_CHANNELB_PROTOCOL_TYPE and config_FIRMARE_PARAM_CHANNELB_MEDIUM_TYPE
+#else 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+#endif    
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+   {.u8ChannelProtocolType=PARAMETER_RESERVED, .u8MediumType=PARAMETER_RESERVED}, 
+    /* Choosing the System Interface */
+#if (config_FIRMWARE_PARAM_SYSTEM_INTERFACE == config_FIRMWARE_PARAM_SYSTEM_INTERFACE_KCS)
+    {.u8ChannelProtocolType=CHANNEL_PROTOCOL_TYPE_KCS},
+#elif (config_FIRMWARE_PARAM_SYSTEM_INTERFACE == config_FIRMWARE_PARAM_SYSTEM_INTERFACE_SMIC)
+    {.u8ChannelProtocolType=CHANNEL_PROTOCOL_TYPE_SMIC},
+#elif (config_FIRMWARE_PARAM_SYSTEM_INTERFACE == config_FIRMWARE_PARAM_SYSTEM_INTERFACE_BT_10)
+    {.u8ChannelProtocolType=CHANNEL_PROTOCOL_TYPE_BT_10},
+#elif (config_FIRMWARE_PARAM_SYSTEM_INTERFACE == config_FIRMWARE_PARAM_SYSTEM_INTERFACE_BT_15)
+    {.u8ChannelProtocolType=CHANNEL_PROTOCOL_TYPE_BT_15},
+#else 
+    #error Undefined config_FIRMWARE_PARAM_SYSTEM_INTERFACE
+#endif    
+};

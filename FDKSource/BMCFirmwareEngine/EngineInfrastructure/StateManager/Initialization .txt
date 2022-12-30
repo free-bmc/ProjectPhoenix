@@ -1,0 +1,40 @@
+
+
+Initialization 
+
+    Start at PRE-INIT   : Initialization of all Engine Infrastructure
+                          Central Component Database 
+                          State Management 
+                          Error Handling 
+
+    Start at INIT       : Chip FDK Initialization 
+                          Platform FDK Initialization 
+                          Chip Transport Initialization 
+                          Transport Infrastructure
+                          IPMI Standard 
+                          DMTF Standard 
+                          Platform Managers 
+                          
+    Start at STARTED    : Chip Transport Started
+                          Transport Infrastructure Started
+                          IPMI Standard
+                          DMTF Standard 
+                          Platform Managers Started 
+                          Started the State Manager to Control 
+
+
+                          
+ State Manager (Ownes the Central Component Database) 
+ 
+    Chassis Management
+    Front Panel Button 
+    On-board Button         -->  Send State Manager POWER_S5 
+    
+    
+    
+
+    
+
+    
+
+    
